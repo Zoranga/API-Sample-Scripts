@@ -1,0 +1,57 @@
+/*
+ * This file is part of the Zoranga API Sample Code
+ * All the possible responses returned when you make a status request call
+ * (c) Ikenna Mbanusi <incofabikenna@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+ 
+ 
+/* IMPORTANT WARNING! - All responses are in JSON format. */
+
+/////////////////////////////Response if pin is inavlid or used or user did not complete airtime transfer
+
+Array
+(
+    [result_code] => 411
+    [response_message] => Transaction was not found
+    [message] => DELETED_USED_INVALID
+    [amount] => 0
+    [transaction_charge] => 
+    [balance_before_transaction] => unavailbale
+    [balance_after_transaction] => unavailbale
+    [reference] => 10016826
+    [updated_time] => 
+)
+
+/////////////////////////////Response if deposit is yet to be credited
+
+Array
+(
+    [result_code] => 600
+    [response_message] => Deposit has not been credited
+    [message] => DEPOSIT_PENDING
+    [amount] => 0
+    [transaction_charge] => 0
+    [balance_before_transaction] => unavailbale
+    [balance_after_transaction] => unavailbale
+    [reference] => 10016842
+    [updated_time] => 0000-00-00 00:00:00
+)
+
+/////////////////////////////Response if deposit has been credited
+
+Array
+(
+    [result_code] => 600
+    [response_message] => Deposit has been credited
+    [message] => DEPOSIT_CREDITED
+    [amount] => 100
+    [transaction_charge] => 30
+    [balance_before_transaction] => 2485
+    [balance_after_transaction] => 2555
+    [reference] => 10016840
+    [updated_time] => 2017-06-23 21:59:55
+)
+
