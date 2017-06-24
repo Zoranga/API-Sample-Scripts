@@ -22,7 +22,9 @@
 
        $curl = curl_init($service_url);
 
+///////////////Object could be statusRequest, pinDeposit or airtimeTransfer
 
+///////////////When object is statusRequest, you only need the apiKey, merchantId and reference as you post parameters
 
        $curl_post_data = array
 
@@ -59,6 +61,7 @@
        curl_close($curl);
 
 
+///////////////////////////Decide what you do with the responses, for me I just displayed it
 
 print $curl_response;
 
